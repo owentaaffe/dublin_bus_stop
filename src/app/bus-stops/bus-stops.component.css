@@ -1,0 +1,53 @@
+/*
+Assignment: BSc Mobile Web Applications, Digital Skills Acadeny
+
+Student ID: WE60-1054
+Filecreated: 2018/06/01
+Reference Sources: 
+You Tube tutorial: https://www.youtube.com/watch?v=0eWrpsCLMJQ&list=PLC3y8-rFHvwhBRAgFinJR8KHIrCdTkZcZ
+On-line tutorial: https://angular.io/tutorial
+
+@author: Owen Taaffe
+@version: v1.0
+
+-
+Changelog:
+* bus-stops.component.css: added ccs for input, button, table
+
+*/
+
+input {
+    margin-bottom: 1em;
+}
+
+button :hover {
+   color: blue;
+}
+
+.bth {
+    border-radius: .2em;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+  
+.btn-primary:hover {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+.table {
+    border: .2em solid #000;
+    background-color: gold;
+    margin: auto;
+    width: 90% !important; 
+}
+td, th { 
+    padding: 0 1em;
+    border-right: .1em solid #000;
+    border-bottom: .1em solid #000;
+}

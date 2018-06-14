@@ -1,0 +1,45 @@
+<!--
+Assignment: BSc Mobile Web Applications, Digital Skills Acadeny
+
+Student ID: WE60-1054
+Filecreated: 2018/06/01
+Reference Sources: 
+You Tube tutorial: https://www.youtube.com/watch?v=0eWrpsCLMJQ&list=PLC3y8-rFHvwhBRAgFinJR8KHIrCdTkZcZ
+On-line tutorial: https://angular.io/tutorial
+
+@author: Owen Taaffe
+@version: v1.0
+
+-
+Changelog:
+* bus-stops.component.html: added form for bus stop id, table to receive info
+
+-->
+
+<div style="text-align:center">
+  <h1>{{ title }}</h1>
+
+  <form (ngSubmit)="onSubmit(theForm)" #theForm="ngForm">
+    <input [(ngModel)]="stopId" name="stopId" type="text" id="stopId" placeholder="Enter Bus Stop Id">
+    <button type="submit" class="bth btn-primary">Submit</button> 
+  </form>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Route Number</th>
+        <th>Due Time</th>
+        <th>Destination</th>
+        <th>Origin</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let result of data.results">
+        <td>{{ result.route }}</td>
+        <td>{{ result.duetime }} min(s)</td>
+        <td>{{ result.destination }}</td>
+        <td>{{ result.origin }}</td>
+      </tr>
+    </tbody>
+  </table>
+ </div>

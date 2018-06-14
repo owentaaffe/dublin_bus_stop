@@ -1,0 +1,81 @@
+/*
+Assignment: BSc Mobile Web Applications, Digital Skills Acadeny
+
+Student ID: WE60-1054
+Filecreated: 2018/05/28
+Reference Sources: 
+You Tube tutorial: https://www.youtube.com/watch?v=0eWrpsCLMJQ&list=PLC3y8-rFHvwhBRAgFinJR8KHIrCdTkZcZ
+On-line tutorial: https://angular.io/tutorial
+
+@author: Owen Taaffe
+@version: v1.0
+
+-
+Changelog:
+* app.component.css: added ccs for input, button, table
+
+*/
+
+.btn {
+    background-color: green;
+    border-radius: .3em;
+    padding: .5em;
+    font-weight: bold;
+}
+
+.title_div {
+    text-align: center;
+    margin-top: -3.5em;
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 76px;
+    height: 76px;
+    font-size: 0;
+    text-indent: -9999px;
+    cursor: pointer;
+    outline: none;
+    background: none;
+    border: 0;
+    float: right;
+}
+   
+.hamburger span {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 16px;
+    right: 20px;
+    height: 8px;
+    background: gold;
+}
+
+.hamburger span::before,
+.hamburger span::after {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: gold;
+    content: "";
+}
+
+.hamburger span::before {
+    top: -20px;
+}
+
+.hamburger span::after {
+    bottom: -20px;
+}
+
+@media all and (max-width: 595px) {
+    .title_div {
+        margin-top: -.5em;
+    }
+}

@@ -1,20 +1,38 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<!--
+Assignment: BSc Mobile Web Applications, Digital Skills Acadeny
 
+Student ID: WE60-1054
+Filecreated: 2018/05/28
+Reference Sources:
+You Tube tutorial: https://www.youtube.com/watch?v=0eWrpsCLMJQ&list=PLC3y8-rFHvwhBRAgFinJR8KHIrCdTkZcZ
+On-line tutorial: https://angular.io/tutorial 
+
+@author: Owen Taaffe
+@version: v1.0
+
+-
+Changelog:
+* app.component.html: added app-bus-stops element
+
+-->
+
+<button (click)="showDialog = !showDialog" id="Dialog" class="btn">Open Instructions</button>
+<div class="title_div">
+	<h1>{{ title }}</h1> 
+</div>
+<app-index-modal [(visible)]="showDialog">
+	<button (click)="showDialog = !showDialog" class="btn">Close</button>
+	<h2>Welcome to Dublin Bus Info <small>by</small> Stop ID App</h2>
+	<p>
+		Please enter a bus stopid in the input area and submit, this alrady has the stopid of 2 please enter your own.
+	</p>
+	<p>
+		This will give you the route numbers of the bus(es), the times next bus(es) is due in minutes, the names of the location it started at and the names of the location it ends at. 
+	</p>
+	<p>
+		This infomation will refresh itself every 30 seconds, please remember that it may take upto that amount of time to retreive your info depending on when in that timeframe you entered your bus stopid.
+	</p>
+	<p><b>Thank You</b> for using this application hope you enjoy you bus trip.</p>
+</app-index-modal>
+
+<app-bus-stops></app-bus-stops>

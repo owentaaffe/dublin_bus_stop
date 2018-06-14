@@ -1,0 +1,56 @@
+/*
+Assignment: BSc Mobile Web Applications, Digital Skills Acadeny
+
+Student ID: WE60-1054
+Filecreated: 2018/06/01
+Reference Sources: 
+You Tube tutorial: https://www.youtube.com/watch?v=0eWrpsCLMJQ&list=PLC3y8-rFHvwhBRAgFinJR8KHIrCdTkZcZ
+On-line tutorial: https://angular.io/tutorial
+On-line tutorial: https://coryrylan.com/blog/build-a-angular-modal-dialog-with-angular-animate
+
+@author: Owen Taaffe
+@version: v1.0
+
+-
+Changelog:
+* index-modal.component.css: added ccs for input, button, table
+
+*/
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  
+  .dialog {
+    z-index: 1000;
+    overflow: scroll;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    min-height: 200px;
+    max-height: 90%;
+    width: 95%;
+    max-width: 90%;
+    background-color: #fff;
+    padding: 12px;
+    box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 13px 19px 2px rgba(0, 0, 0, 0.14), 0 5px 24px 4px rgba(0, 0, 0, 0.12);
+  }
+
+  #btn-close {
+      display: none;
+  }
+
+  #Dialog {
+      overflow: visible;
+  }
+
+  

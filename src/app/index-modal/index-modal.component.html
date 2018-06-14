@@ -1,0 +1,23 @@
+<!--
+Assignment: BSc Mobile Web Applications, Digital Skills Acadeny
+
+Student ID: WE60-1054
+Filecreated: 2018/06/01
+Reference Sources: 
+You Tube tutorial: https://www.youtube.com/watch?v=0eWrpsCLMJQ&list=PLC3y8-rFHvwhBRAgFinJR8KHIrCdTkZcZ
+On-line tutorial: https://angular.io/tutorial
+On-line tutorial: https://coryrylan.com/blog/build-a-angular-modal-dialog-with-angular-animate
+
+@author: Owen Taaffe
+@version: v1.0
+
+-
+Changelog:
+* index-modal.component.css: added ccs for input, button, table	
+-->
+
+<div [@dialog] *ngIf="visible" class="dialog">
+	<ng-content></ng-content>
+	<button *ngIf="closable" (click)="close()" aria-label="Close" id="btn-close" class="dialog__close-btn"></button>
+</div>
+<div *ngIf="visible" class="overlay" (click)="close()"></div>
